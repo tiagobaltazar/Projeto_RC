@@ -143,7 +143,10 @@ void signUP(int fd){
   memset(buffer, 0, strlen(buffer));
   nread = read(fd, buffer, BUF_SIZE-1);
   buffer[nread] = '\0'; 
-  exit(0); 
+  printf("\nA sua conta foi registada mas tera de se aceite para a usar.\n");
+  printf("\nA aplicacao ira encerrar. Prima enter.\n");
+  getchar();
+  exit(0);  
 }
 
 void mostradenuncia(int fd){
